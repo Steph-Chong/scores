@@ -1,3 +1,5 @@
+# MODIFICATION
+
 """
 This foundation class provides an underpinning data structure which can be used for 
 contingency tables of various kinds, also known as a confusion matrix.
