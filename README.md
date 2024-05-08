@@ -5,7 +5,16 @@
 One-line intro: xarray based verification scores and tools that can scale with Dask if needed. Pandas supported where possible.
 Why use it: trusted implementations, novel metrics, performance, one-stop-shop.
 
-> A **complete list** of the 47 included Metrics, Statistical Techniques and Data Processing Tools is: [available here](https://scores.readthedocs.io/en/latest/included.html).
+> [A **complete list** of the **47 included** Metrics, Statistical Techniques and Data Processing Tools is: available here](https://scores.readthedocs.io/en/latest/included.html).
+
+The table below shows a **curated selection** of the Metrics and Tools Inlcuded in `scores`:
+| Continuous                      | Probability   | Categorical      | Statistical Tests |
+| ----------                      | ----------    | -----------      | ---------------   |
+| MAE, MSE, RMSE, Flip-Flop Index, Quantile Score, Murphy score, Pearson's Correlation Coefficient, Additive Bias, Multiplicative Bias  | CRPS for CDF, CRPS for ensemble, ROC, Brier Score, Isotonic Regression (reliability diagrams)   | FIRM, Hit Rate, Probability of False Detection, Success Ratio, Peirce's Skill Score  |  Diebold Mariano (with the Harvey et al. 1997 and the Hering and Genton 2011 modifications) |
+
+
+
+> [A **complete list** of the 47 included Metrics, Statistical Techniques and Data Processing Tools is: available here](https://scores.readthedocs.io/en/latest/included.html).
 
 | Curated Selection of the Metrics and Tools Inlcuded in `scores`. (Full list [available here](https://scores.readthedocs.io/en/latest/included.html))                                                                                        | 
 | :-------------------------------------------------------------:                        |
