@@ -85,37 +85,7 @@ Here is a **curated selection** of the metrics, tools and statistical tests curr
 +===================+============+=====================+
 | Footer                                               |
 +===================+============+=====================+
-
-
-Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-|                   | Description                                                 | Selection of Functions Included in `scores`                     |      
-|                   |                                                             |                                                                 |       
-+:=================:+:============================================================:+:==============================================================:+
-| Continuous        | Scores for evaluating single-valued continuous forecasts.   | Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean  |
-|                   |                                                             | Squared Error (RMSE), Additive Bias, Multiplicative Bias,       |
-|                   |                                                             | Pearson's Correlation Coefficient, Flip-Flop Index, Quantile    |
-|                   |                                                             | loss, Murphy score                                              |
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| Probability       | Scores for evaluating forecasts that are expressed as       | Brier Score, Continuous Ranked Probability Score (CRPS) for     |
-|                   | predictive distributions, ensembles, and probabilities      | Cumulative Density Function (CDF), Threshold weighted CRPS for  | 
-|                   | of binary events.                                           | CDF, CRPS for ensemble, Receiver Operating                      | 
-|                   |                                                             | Characteristic (ROC), Isotonic Regression (reliability diagrams)|
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| Categorical       | Scores for evaluating forecasts based on categories.        | Probability of Detection (POD), False Alarm Rate (FAR),         |
-|                   |                                                             | Probability of False Detection (POFD), Success Ratio, Accuracy, | 
-|                   |                                                             | Peirce's Skill Score, Critical Success Index (CSI),             |
-|                   |                                                             | Gilbert Skill Score, Heidke Skill Score, Odds Ratio             |
-|                   |                                                             | Odds Ratio Skill Score, F1 score,                               |
-|                   |                                                             | FIxed Risk Multicategorical (FIRM) Score.                       |
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| Statistical Tests | Tools to conduct statistical tests and generate             | Diebold Mariano.                                                | 
-|                   | confidence intervals                                        |                                                                 |
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| Processing Tools  | Tools to pre-process data.                                  |                                                                 |
-+===================+=============================================================+=================================================================+
-                                                                                                                                    
-
+                                                                                                                                 
 Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
 +-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
 |                   | Description                                                 | Selection of Functions Included in `scores`                     |      
