@@ -43,7 +43,7 @@ The research purpose of this software is (a) to mathematically verify and valida
 In order to meet the needs of researchers, `scores`:
 
 - is designed to work with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. It is designed to handle missing data, masking of data and weighting of results.
-- includes novel scores not commonly found elsewhere (e.g. FIRM, Flip-Flop Index).
+- includes novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]).
 - is designed to work effectively with the libraries, data structures and methods commonly used in the meteorology, weather and climate communities. Scores can effectively handle the dimensionality, data size and data structures commonly utilised for: 
   - gridded earth system data (e.g. Numerical Weather Prediction models) 
   - tabular, point, lat/lon or site-based data (e.g. forecasts for specific locations).
@@ -85,7 +85,6 @@ The Jive verification metrics have been used to support several publications [@G
 `climpred` [@Brady:2021] provides some related functionality and provides many of the same scores. `climpred` does not contain some of the novel functions contained within `scores`, and at the same time makes some design choices specifically associated with climate modelling which do not generalise as effectively to broader use cases as may be needed in some circumstances. Releasing `scores` separately allows the differing design philosophies to be considered by the community.
 
 `xskillscore` [@xskillscore] provides many of the same functions as `scores`. `xskillscore` does not contain some of the novel functions contained within `scores` and does not contain the Jupyter Notebook tutorials which provide users with clear guidance on the use of the verification metrics. 
-tennlee marked this conversation as resolved.
 
 `METplus` [@Brown:2021] provides related functionality. `METplus` includes a database and visualisation system with python wrappers to utilise the `MET` package. Verification scores in `MET` are implemented in C++ rather than Python.  `METplus` does not contain some of the novel functions contained within `scores`.
 
