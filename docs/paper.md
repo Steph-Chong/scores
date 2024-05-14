@@ -61,10 +61,8 @@ We anticipate more scores, metrics and statistical techniques will be added over
 Additionally, `scores` has an area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores. 
 
 Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
-
 +-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-|                   | Description                                                 | Selection of Functions Included in `scores`                     | 
-|                   |                                                             |                                                                 | 
+|                   | Description                                                 | Selection of Functions Included in `scores`                     |      
 +:=================:+:============================================================:+:==============================================================:+
 | Continuous        | Scores for evaluating single-valued continuous forecasts.   | Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean  |
 |                   |                                                             | Squared Error (RMSE), Additive Bias, Multiplicative Bias,       |
