@@ -60,6 +60,19 @@ We anticipate more scores, metrics and statistical techniques will be added over
 
 Additionally, `scores` has an area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores. 
 
++-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
+|                   | Description                                                 |  Selection of Functions Included in `scores`                    |
+|                   | Selection of Functions Included in `scores`                 |                                                                 |
++:=================:+:============================================================:+:==============================================================:+
+| Continuous        | Scores for evaluating single-valued continuous forecasts.   | Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Additive Bias, Multiplicative Bias, Pearson's Correlation Coefficient, Flip-Flop Index, Quantile loss, Murphy score |
++-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
+| TEST              |                                        TEST                 |TESt                                                             | 
++-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
+| Processing Tools  | Tools to pre-process data.                                  |                                                                 |
++===================+=============================================================+=================================================================+
+|                                                                                                                                                   |
++===================+=============================================================+=================================================================+
+
 Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
 +-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
 |                   | Description                                                 | Selection of Functions Included in `scores`                     |      
