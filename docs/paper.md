@@ -60,18 +60,15 @@ We anticipate more scores, metrics and statistical techniques will be added over
 
 Additionally, `scores` has an area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores. 
 
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-|                   | Description                                                 |  Selection of Functions Included in `scores`                    |
-|                   | Selection of Functions Included in `scores`                 |                                                                 |
-+:=================:+:============================================================:+:==============================================================:+
-| Continuous        | Scores for evaluating single-valued continuous forecasts.   | Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Additive Bias, Multiplicative Bias, Pearson's Correlation Coefficient, Flip-Flop Index, Quantile loss, Murphy score |
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| TEST              |                                        TEST                 |TESt                                                             | 
-+-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
-| Processing Tools  | Tools to pre-process data.                                  |                                                                 |
-+===================+=============================================================+=================================================================+
-|                                                                                                                                                   |
-+===================+=============================================================+=================================================================+
+Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
+
+|                       	| **Description** 	| **Included** 	|
+|-----------------------	|-----------------	|--------------	|
+| **[Continuous](https://scores.readthedocs.io/en/latest/included.html#continuous)**        	|Scores for evaluating single-valued continuous forecasts.                  	|Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Additive Bias, Multiplicative Bias, Pearson's Correlation Coefficient, Flip-Flop Index, Quantile loss, Murphy score.              	|
+| **[Probability](https://scores.readthedocs.io/en/latest/included.html#probability)**       	|Scores for evaluating forecasts that are expressed as predictive distributions, ensembles, and probabilities of binary events.                 	|Brier Score, Continuous Ranked Probability Score (CRPS) for Cumulative Density Function (CDF), Threshold weighted CRPS for CDF, CRPS for ensemble, Receiver Operating Characteristic (ROC), Isotonic Regression (reliability diagrams).              	|
+| **[Categorical](https://scores.readthedocs.io/en/latest/included.html#categorical)**       	|Scores for evaluating forecasts based on categories.                	|Probability of Detection (POD), False Alarm Rate (FAR), Probability of False Detection (POFD), Success Ratio, Accuracy, Peirce's Skill Score, Critical Success Index (CSI), Gilbert Skill Score, Heidke Skill Score, Odds Ratio, Odds Ratio Skill Score, F1 score, FIxed Risk Multicategorical (FIRM) Score.               	|
+| **[Statistical Tests](https://scores.readthedocs.io/en/latest/included.html#statistical-tests)** 	|Tools to conduct statistical tests and generate confidence intervals.                 	|Diebold Mariano.              	|
+| **[Processing tools](https://scores.readthedocs.io/en/latest/included.html#processing-tools-for-preparing-data)**        	|Tools to pre-process data.                 	|Data matching, Discretization, Cumulative Density Function Manipulation.              	|
 
 Here is a **curated selection** of the metrics, tools and statistical tests currently included in `scores`:
 +-------------------+-------------------------------------------------------------+-----------------------------------------------------------------+
