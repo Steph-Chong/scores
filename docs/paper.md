@@ -60,8 +60,8 @@ Table: Key Benefits of `scores`
 |                | • Easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments. |
 |                | • Uses Dask [@Dask:2016] for scaling and performance. |
 |                | • Aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024] |
-
-# Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
+<br/><br/>
+## Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
 
 At the time of writing, `scores` includes **over 50** metrics, statistical techniques and data processing tools. For an up to date list, please see the `scores` [documentation](https://scores.readthedocs.io/en/latest/included.html).
 
@@ -81,13 +81,13 @@ Table: A **Curated Selection** of the Metrics, Tools and Statistical Tests Curre
 |
 | **[Processing Tools](https://scores.readthedocs.io/en/latest/included.html#processing-tools-for-preparing-data)**        	|Tools to pre-process data.                 	|Data matching, Discretisation, Cumulative Density Function Manipulation. |
 
-# Use in Academic Work
+## Use in Academic Work
 
 In 2015, the Australian Bureau of Meteorology began developing a new verification system called Jive. For a description of Jive see @loveday2024jive. The Jive verification metrics have been used to support several publications [@Griffiths:2017; @Foley:2020; @Taggart:2022b; @Taggart:2022c; @Taggart:2022d]. `scores` has arisen from the Jive verification system and was created to modularise the Jive verification functions and make them available as an open source package. 
 
 `scores` has been used to explore user-focused approaches to evaluating probabilistic and categorical forecasts [@loveday2024user].
 
-# Related Software Packages
+## Related Software Packages
 
 `climpred` [@Brady:2021] provides some related functionality and provides many of the same scores. `climpred` does not contain some of the novel functions contained within `scores`, and at the same time makes some design choices specifically associated with climate modelling which do not generalise as effectively to broader use cases as may be needed in some circumstances. Releasing `scores` separately allows the differing design philosophies to be considered by the community.
 
