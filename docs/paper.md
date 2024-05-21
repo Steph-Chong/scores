@@ -31,8 +31,6 @@ bibliography: paper.bib
 
 All of the scores and statistical techniques in this package have undergone a thorough scientific and software review. Every score has a companion Jupyter Notebook tutorial that demonstrates its use in practice.
 
-`scores` is focused on supporting xarray [@Hoyer:2017] datatypes for Earth system data. It also aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024], and to work with NetCDF4, hdf5, Zarr and GRIB data sources among others. `scores` is designed to utilise Dask for scaling and performance.
-
 `scores` primarily supports xarray datatypes for Earth system data, allowing it to work with NetCDF4, hdf5, Zarr and GRIB data sources among others. It also aims to be compatible with pandas and geopandas. `scores` uses Dask for scaling and performance.
 
 The software repository can be found at [https://github.com/nci/scores/](https://github.com/nci/scores/).
@@ -43,7 +41,7 @@ The research purpose of this software is (a) to mathematically verify and valida
 
 ## Key Benefits
 
-In order to meet the needs of researchers, `scores` has a number of key benefits; outlined in the table below.
+In order to meet the needs of researchers, `scores` has a number of key benefits - outlined in the table below.
 
 Table: Key Benefits of `scores`
 
@@ -127,6 +125,8 @@ In order to meet the needs of researchers, `scores`:
 - is intended to be easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments.  
 
 - uses Dask [@Dask:2016] for scaling and performance.
+
+`scores` is focused on supporting xarray [@Hoyer:2017] datatypes for Earth system data. It also aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024], and to work with NetCDF4, hdf5, Zarr and GRIB data sources among others. `scores` is designed to utilise Dask for scaling and performance.
 
 Here is a curated selection of the metrics, tools and statistical tests currently included in `scores`:
 
