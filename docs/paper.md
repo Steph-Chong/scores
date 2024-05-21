@@ -39,60 +39,6 @@ The software repository can be found at [https://github.com/nci/scores/](https:/
 
 The research purpose of this software is (a) to mathematically verify and validate scientific research and (b) to foster research into new scores and metrics. 
 
-In order to meet the needs of researchers, `scores` provides the following features.
-
-Table: Key Benefits of `scores`
-
-|                |                                                                                     |
-|----------------|-------------------------------------------------------------------------------------|
-| Data Handling  | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for: |  
-|                |   - gridded Earth system data (e.g. Numerical Weather Prediction models) | 
-|                |   - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations). |     
-|                | • Handles missing data, masking of data and weighting of results. |
-|                | • Supports xarray [@Hoyer:2017] datatypes, and works with NetCDF4, hdf5, Zarr and GRIB data sources among others.  
-|
-| Usability      | • A companion Jupyter Notebook tutorial for each metric and statistical test that demonstrates its use in practice. |
-|                | • Novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]). |
-|                | • All scores and statistical techniques have undergone a thorough scientific and software review. |
-|                | • An area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores.  
-|
-| Compatability  | • Highly modular and avoids extensive dependencies by providing its own implementations where relevant. |  
-|                | • Easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments. |
-|                | • Uses Dask [@Dask:2016] for scaling and performance. |
-|                | • Aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024] |
-
-# Statement of Need
-
-The research purpose of this software is (a) to mathematically verify and validate scientific research and (b) to foster research into new scores and metrics. 
-
-In order to meet the needs of researchers, `scores` provides the following key benefits.
-
-**Data Handling**
-
-- Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for:
-  - gridded Earth system data (e.g. Numerical Weather Prediction models)
-  - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations).
-- Handles missing data, masking of data and weighting of results.
-- Supports xarray [@Hoyer:2017] datatypes, and works with NetCDF4, hdf5, Zarr and GRIB data sources among others.
-
-**Usability**
-
-- A companion Jupyter Notebook tutorial for each metric and statistical test that demonstrates its use in practice.
-- Novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular])
-- All scores and statistical techniques have undergone a thorough scientific and software review.
-- An area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores.  
-
-**Compatability**
-
-- Highly modular and avoids extensive dependencies by providing its own implementations where relevant.
-- Easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments.
-- Uses Dask [@Dask:2016] for scaling and performance.
-- Aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024] |
-
-# Statement of Need
-
-The research purpose of this software is (a) to mathematically verify and validate scientific research and (b) to foster research into new scores and metrics. 
-
 In order to meet the needs of researchers, `scores` provides the following key benefits.
 
 **Data Handling**
