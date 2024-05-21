@@ -45,7 +45,7 @@ In order to meet the needs of researchers, `scores` has a number of key benefits
 
 Table: Key Benefits of `scores`
 
-|             |  **Key Benefits**                                                                   |
+|             |                                                                                     |
 |-------------|-------------------------------------------------------------------------------------|
 | Data Handling | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for: |  
 |             |  - gridded Earth system data (e.g. Numerical Weather Prediction models) | 
