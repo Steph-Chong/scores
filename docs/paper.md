@@ -63,7 +63,7 @@ In order to meet the needs of researchers, `scores`:
 
 ## Key Benefits
 
-In order to meet the needs of researchers, `scores` has the features outlined below.
+In order to meet the needs of researchers, `scores` includes the features outlined below.
 
 Table: Key Benefits of `scores`
 
@@ -91,7 +91,7 @@ At the time of writing, `scores` includes **over 50** metrics, statistical techn
 
 We anticipate more metrics, tools and statistical techniques will be added over time.
 
-<span style="font-variant:small-caps; font-weight:bold;">Table: A Curated Selection of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
+[Table: A __Curated Selection__ of the Metrics, Tools and Statistical Tests Currently Included in `scores`]{.smallcaps}
 
 Table: A **Curated Selection** of the Metrics, Tools and Statistical Tests Currently Included in `scores`
 
