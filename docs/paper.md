@@ -45,9 +45,9 @@ In order to meet the needs of researchers, `scores`:
 
 |             |                                                                                     |
 |-------------|-------------------------------------------------------------------------------------|
-| Data Handling | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for: |  
-|             |    - gridded Earth system data (e.g. Numerical Weather Prediction models) | 
-|             |    - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations). |     
+| Data Handling | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for:  
+    - gridded Earth system data (e.g. Numerical Weather Prediction models)  
+    - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations). |     
 |             | • Handles missing data, masking of data and weighting of results. |
 |             | • Supports xarray [@Hoyer:2017] datatypes, and works with NetCDF4, hdf5, Zarr and GRIB data sources among others.  
 |
