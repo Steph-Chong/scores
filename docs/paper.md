@@ -55,15 +55,13 @@ Table: Key Benefits of `scores`
 |
 | Content     | • A companion Jupyter Notebook tutorial for each metric and statistical test that demonstrates its use in practice. |
 |             | • Novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]). |
-|             | • All scores and statistical techniques have undergone thorough scientific and software reviews. |
+|             | • All scores and statistical techniques have undergone a thorough scientific and software review. |
 |             | • An area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores.  
 |
 | Ease of Use | • Highly modular and avoids extensive dependencies by providing its own implementations where relevant. |  
 |             | • Easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments. |
 |             | • Uses Dask [@Dask:2016] for scaling and performance. |
 |             | • Aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024] |
-
-All of the scores and statistical techniques in this package have undergone a thorough scientific and software review.
 
 ## Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
 
