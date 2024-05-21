@@ -39,6 +39,8 @@ The software repository can be found at [https://github.com/nci/scores/](https:/
 
 The research purpose of this software is (a) to mathematically verify and validate scientific research and (b) to foster research into new scores and metrics.
 
+## Key Benefits
+
 In order to meet the needs of researchers, `scores` has the key features outlined below.
 
 Table: Key Benefits
@@ -64,8 +66,9 @@ Table: Key Benefits
 
 |                |                                                                                     |
 |----------------|-------------------------------------------------------------------------------------|
-| Data Handling  | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for: |  
-|                |    * gridded Earth system data (e.g. Numerical Weather Prediction models) | 
+| Data Handling  | <ul> <li> Test </ul>  |
+| Data Handling  | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for:   
+    <ul> <li> <ul> <li> gridded Earth system data (e.g. Numerical Weather Prediction models) </ul></ul>| 
 |                |    * tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations). |     
 |                | • Handles missing data, masking of data and weighting of results. |
 |                | • Supports xarray [@Hoyer:2017] datatypes, and works with NetCDF4, hdf5, Zarr and GRIB data sources among others.  
