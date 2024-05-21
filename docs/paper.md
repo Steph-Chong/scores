@@ -41,6 +41,28 @@ The research purpose of this software is (a) to mathematically verify and valida
 
 ## Key Benefits
 
+In order to meet the needs of researchers, `scores`:
+
+- is designed to work with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for:
+  - gridded Earth system data (e.g. Numerical Weather Prediction models)
+  - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations).  
+
+- is designed to handle missing data, masking of data and weighting of results.  
+
+- includes a companion Jupyter Notebook tutorial for each metric and statistical test that demonstrates its use in practice.  
+
+- includes novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]).  
+
+- has an area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores. 
+
+- is highly modular and avoids extensive dependencies by providing its own implementations where relevant.  
+
+- is intended to be easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments.  
+
+- uses Dask [@Dask:2016] for scaling and performance.
+
+## Key Benefits
+
 In order to meet the needs of researchers, `scores` has the features outlined below.
 
 Table: Key Benefits of `scores`
@@ -68,6 +90,8 @@ Table: Key Benefits of `scores`
 At the time of writing, `scores` includes **over 50** metrics, statistical techniques and data processing tools. For an up to date list, please see the `scores` [documentation](https://scores.readthedocs.io/en/latest/included.html).
 
 We anticipate more metrics, tools and statistical techniques will be added over time.
+
+<span style="font-variant:small-caps;">Table: A <b> Curated Selection </b> of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
 
 Table: A **Curated Selection** of the Metrics, Tools and Statistical Tests Currently Included in `scores`
 
@@ -104,33 +128,5 @@ In 2015, the Australian Bureau of Meteorology began developing a new verificatio
 We acknowledge and are grateful for the support of the Australian Bureau of Meteorology in supporting scientific research and the academic process.
 
 We would like to thank and acknowledge the National Computational Infrastructure (nci.org.au) for hosting the `scores` repository within their GitHub organisation.
-
-## Key Benefits
-
-In order to meet the needs of researchers, `scores`:
-
-- is designed to work with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for:
-  - gridded Earth system data (e.g. Numerical Weather Prediction models)
-  - tabular, point, latitude/longitude or site-based data (e.g. forecasts for specific locations).  
-
-- is designed to handle missing data, masking of data and weighting of results.  
-
-- includes a companion Jupyter Notebook tutorial for each metric and statistical test that demonstrates its use in practice.  
-
-- includes novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]).  
-
-- has an area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores. 
-
-- is highly modular and avoids extensive dependencies by providing its own implementations where relevant.  
-
-- is intended to be easy to integrate and use in a wide variety of environments. It has been tested and used on workstations, servers and in high performance computing (supercomputing) environments.  
-
-- uses Dask [@Dask:2016] for scaling and performance.
-
-`scores` is focused on supporting xarray [@Hoyer:2017] datatypes for Earth system data. It also aims to be compatible with pandas [@pandas:2024; @McKinney:2010] and geopandas [@geopandas:2024], and to work with NetCDF4, hdf5, Zarr and GRIB data sources among others. `scores` is designed to utilise Dask for scaling and performance.
-
-Here is a curated selection of the metrics, tools and statistical tests currently included in `scores`:
-
-Table: [A Curated Selection of the Metrics, Tools and Statistical Tests Currently Included in `scores`]{.smallcaps}
 
 # References
