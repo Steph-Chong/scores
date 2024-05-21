@@ -69,8 +69,6 @@ At the time of writing, `scores` includes **over 50** metrics, statistical techn
 
 We anticipate more metrics, tools and statistical techniques will be added over time.
 
-* * * 
-
 Table: A **Curated Selection** of the Metrics, Tools and Statistical Tests Currently Included in `scores`
 
 |              | **Description** |**A Selection of the Functions Included in `scores`**|
