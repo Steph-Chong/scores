@@ -66,7 +66,9 @@ In order to meet the needs of researchers, `scores`:
 ## Key Benefits
 
 In order to meet the needs of researchers, `scores` has the following key benefits:
-                 
+
+Table: Key Benefits of `scores`
+
 |             |                                                                                     |
 |-------------|-------------------------------------------------------------------------------------|
 | Data Handling | • Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly utilised for: |  
