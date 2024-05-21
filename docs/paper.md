@@ -41,7 +41,7 @@ The research purpose of this software is (a) to mathematically verify and valida
 
 ## Key Benefits
 
-In order to meet the needs of researchers, `scores` has the key benefits outlined in the table below.
+In order to meet the needs of researchers, `scores` has the following key benefits.
 
 |             |                                                                                     |
 |-------------|-------------------------------------------------------------------------------------|
