@@ -90,6 +90,7 @@ At the time of writing, `scores` includes **over 50** metrics, statistical techn
 
 We anticipate more metrics, tools and statistical techniques will be added over time.
 
+Here is a curated selection of the metrics, tools and statistical tests currently included in `scores`:
 
 [A <b>curated selection</b> of the metrics, tools and statistical tests currently included in `scores`]{.smallcaps}
 
@@ -99,10 +100,10 @@ We anticipate more metrics, tools and statistical techniques will be added over 
 
 <span style="font-variant:small-caps;">A <b>curated selection</b> of the metrics, tools and statistical tests currently included in `scores`</span>
 
-<span style="font-variant:small-caps;">A</span> <span style="font-variant:small-caps;font-weight:bold">Curated Selection</span> <span style="font-variant:small-caps;">of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
+<span style="font-variant:small-caps;">A</span> <span style="font-variant:small-caps;font-weight:bold;">Curated Selection</span> <span style="font-variant:small-caps;">of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
 
 
- <span style="color:blue;font-weight:bold">This is blue</span>
+ <span style="color:blue;font-weight:bold;">This is blue</span>
 
 [A <b>Curated Selection</b> of the Metrics, Tools and Statistical Tests Currently Included in `scores`]{.smallcaps}
 
