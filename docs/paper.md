@@ -91,7 +91,7 @@ At the time of writing, `scores` includes **over 50** metrics, statistical techn
 
 We anticipate more metrics, tools and statistical techniques will be added over time.
 
-<span style="font-variant:small-caps;">Table: A <b> Curated Selection </b> of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
+<span style="font-variant:small-caps; font-weight:bold;">Table: A Curated Selection of the Metrics, Tools and Statistical Tests Currently Included in `scores`</span>
 
 Table: A **Curated Selection** of the Metrics, Tools and Statistical Tests Currently Included in `scores`
 
