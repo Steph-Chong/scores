@@ -1,12 +1,12 @@
 """
-This foundation class provides an underpinning data structure which can be used for 
+This foundation class provides an underpinning data structure which can be used for
 contingency tables of various kinds, also known as a confusion matrix.
 
 It allows the careful setting out of when and where forecasts closely match
 observations.
 
-The binary contingency table captures true positives (hits), true negatives (correct negatives), 
-false positives (false alarms) and false negatives (misses). 
+The binary contingency table captures true positives (hits), true negatives (correct negatives),
+false positives (false alarms) and false negatives (misses).
 
 The process of deriving a contingency table relies on the forecast data, the observation
 data, and a matching or event operator. The event operator will produce the category from the
@@ -115,6 +115,54 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         ratio = correct_count / count_dictionary["total_count"]
         return ratio
 
+    def base_rate(self) -> xr.DataArray:
+        """
+        The observed event frequency.
+
+        Returns:
+            xr.DataArray: An xarray object containing the base rate.
+
+        .. math::
+            \\text{base rate} = \\frac{\\text{true positives} + \\text{false negatives}}{\\text{total count}}
+
+        Notes:
+            - Range: 0 to 1, where 1 indicates the event occurred every time.
+            - "True positives" is the same as "hits".
+            - "False negatives" is the same as "misses".
+
+        References:
+            Hogan, R. J. & Mason, I. B. (2011). Deterministic forecasts of binary events.
+            In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification: A practitioner's guide in atmospheric science (2nd ed.,
+            pp. 39-51). https://doi.org/10.1002/9781119960003.ch3
+        """
+        cd = self.counts
+        br = (cd["tp_count"] + cd["fn_count"]) / cd["total_count"]
+        return br
+
+    def forecast_rate(self) -> xr.DataArray:
+        """
+        The forecast event frequency.
+
+        Returns:
+            xr.DataArray: An xarray object containing the forecast rate.
+
+        .. math::
+            \\text{forecast rate} = \\frac{\\text{true positives} + \\text{false positives}}{\\text{total count}}
+
+        Notes:
+            - Range: 0 to 1, where 1 indicates the event was forecast every time.
+            - "True positives" is the same as "hits".
+            - "False positives" is the same as "false alarms".
+
+        References:
+            Hogan, R. J. & Mason, I. B. (2011). Deterministic forecasts of binary events.
+            In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification: A practitioner's guide in atmospheric science (2nd ed.,
+            pp. 39-51). https://doi.org/10.1002/9781119960003.ch3
+        """
+        cd = self.counts
+        br = (cd["tp_count"] + cd["fp_count"]) / cd["total_count"]
+        return br
+
     def fraction_correct(self) -> xr.DataArray:
         """
         Identical to accuracy.
@@ -130,7 +178,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         Notes:
             - Range: 0 to 1, where 1 indicates a perfect score.
             - "True positives" is the same as "hits".
-            - "False negatives" is the same as "misses".
+            - "True negatives" is the same as "correct negatives".
 
         References:
             https://www.cawcr.gov.au/projects/verification/#ACC
@@ -470,7 +518,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         .. math::
             \\text{HK} = \\frac{\\text{true positives}}{\\text{true positives} + \\text{false negatives}} - \\frac{\\text{false positives}}{\\text{false positives} + \\text{true negatives}}
 
-        Where :math:`\\text{HK}` is Hansen and Kuipers Discriminant
+        where :math:`\\text{HK}` is Hansen and Kuipers Discriminant
 
         Notes:
             - Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
@@ -607,7 +655,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             xr.DataArray: An xarray object containing the F1 score
 
         .. math::
-            \\text{F1} = \\frac{2 \\times \\text{true positives}}{(2 \\times  \\text{true positives}) + \\text{false positives} + \\text{false negatives}}
+            \\text{F1} = \\frac{2 \\cdot \\text{true positives}}{(2 \\cdot  \\text{true positives}) + \\text{false positives} + \\text{false negatives}}
 
         Notes:
             - "True positives" is the same as "hits".
@@ -640,7 +688,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         where
 
         .. math::
-            \\text{true_positives}_{\\text{random}} = \\frac{(\\text{true positives} + \\text{false negatives}) (\\text{true positives} + \\text{false positives})}{\\text{total count}}            
+            \\text{true_positives}_{\\text{random}} = \\frac{(\\text{true positives} + \\text{false negatives}) (\\text{true positives} + \\text{false positives})}{\\text{total count}}
 
         Notes:
             - Range: -1/3 to 1, 0 indicates no skill. Perfect score: 1.
@@ -706,8 +754,32 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         Returns:
             xr.DataArray: An xarray object containing the Heidke skill score
 
+        .. math::
+            \\\\
+            \\text{HSS} =
+                \\frac{\\text{true positives} + \\text{true negatives} - E_{random}}{
+                       \\text{total count} - E_{\\text{random}}}
+
+        where
+
+        .. math::
+            \\begin{aligned}
+                E_{\\text{random}}
+                    &= \\text{expected correct matches due to random chance}
+                \\\\&= \\frac{\\left(\\text{tp} + \\text{fn}\\right) \\cdot
+                              \\left(\\text{tp} + \\text{fp}\\right) +
+                              \\left(\\text{tn} + \\text{fn}\\right) \\cdot
+                              \\left(\\text{tn} + \\text{fp}\\right)}{
+                              \\text{total count}}
+            \\end{aligned}
+
         Notes:
             - Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+            - HSS = Heidke Skill Score
+            - "True positives" (:math:`\\text{tp}`) is the same as "hits".
+            - "False negatives" (:math:`\\text{fn}`) is the same as "misses".
+            - "False positives" (:math:`\\text{fp}`) is the same as "false alarms".
+            - "True negatives" (:math:`\\text{tn}`) is the same as "correct negatives".
 
         References:
             - https://en.wikipedia.org/wiki/Cohen%27s_kappa
@@ -731,8 +803,31 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         Returns:
             xr.DataArray: An xarray object containing the Cohen's Kappa score
 
+        .. math::
+            \\\\
+            \\text{Cohen's Kappa} \\left(\\kappa\\right) =
+                \\frac{\\text{true positives} + \\text{true negatives} - E_{random}}{
+                       \\text{total count} - E_{\\text{random}}}
+
+        where
+
+        .. math::
+            \\begin{aligned}
+                E_{\\text{random}}
+                    &= \\text{expected correct matches due to random chance}
+                \\\\&= \\frac{\\left(\\text{tp} + \\text{fn}\\right) \\cdot
+                              \\left(\\text{tp} + \\text{fp}\\right) +
+                              \\left(\\text{tn} + \\text{fn}\\right) \\cdot
+                              \\left(\\text{tn} + \\text{fp}\\right)}{
+                              \\text{total count}}
+            \\end{aligned}
+
         Notes:
             - Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+            - "True positives" (:math:`\\text{tp}`) is the same as "hits".
+            - "False negatives" (:math:`\\text{fn}`) is the same as "misses".
+            - "False positives" (:math:`\\text{fp}`) is the same as "false alarms".
+            - "True negatives" (:math:`\\text{tn}`) is the same as "correct negatives".
 
         References:
             - https://en.wikipedia.org/wiki/Cohen%27s_kappa
@@ -746,11 +841,38 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         What is the ratio of the odds of a "yes" forecast being correct, to the odds of
         a "yes" forecast being wrong?
 
-        Notes:
-            Odds ratio - Range: 0 to ∞, 1 indicates no skill. Perfect score: ∞.
-
         Returns:
             xr.DataArray: An xarray object containing the odds ratio
+
+        .. math::
+            \\begin{aligned}
+                \\text{odds ratio} &=
+                    \\left[\\frac{\\text{POD}}{\\text{1 - POD}}\\right]
+                        \\div
+                    \\left[\\frac{\\text{POFD}}{\\text{1 - POFD}}\\right]
+                              \\\\ &=
+                    \\frac{\\text{true positives} \\cdot \\text{true negatives}}{\\text{false positives} \\cdot \\text{false negatives}}
+            \\end{aligned}
+
+        where
+
+        .. math::
+            \\text{POD} = \\frac{\\text{true positives}}{\\text{true positives} + \\text{false negatives}}
+
+        and
+
+        .. math::
+            \\text{POFD} = \\frac{\\text{false positives}}{\\text{true negatives} + \\text{false positives}}
+
+
+        Notes:
+            - Range: 0 to ∞, 1 indicates no skill. Perfect score: ∞.
+            - POD = Probability of Detection
+            - POFD = Probability of False Detection
+            - "True positives" is the same as "hits".
+            - "False negatives" is the same as "misses".
+            - "False positives" is the same as "false alarms".
+            - "True negatives" is the same as "correct negatives".
 
         References:
             - Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill. \
@@ -773,8 +895,24 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         Returns:
             xr.DataArray: An xarray object containing the odds ratio skill score
 
+        .. math::
+
+            \\begin{aligned}
+                \\text{ORSS} &= \\frac{\\text{OR} - 1}{\\text{OR} + 1}
+                        \\\\ &= \\frac{\\text{true positives} \\cdot \\text{true negatives}
+                                         - \\text{false positives} \\cdot \\text{false negatives}}{
+                                       \\text{true positives} \\cdot \\text{true negatives}
+                                         + \\text{false positives} \\cdot \\text{false negatives}}
+            \\end{aligned}
+
         Notes:
-            Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+            - Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+            - ORSS = Odds Ratio Skill Score
+            - OR = Odds ratio, see: :meth:`odds_ratio`
+            - "True positives" is the same as "hits".
+            - "False negatives" is the same as "misses".
+            - "False positives" is the same as "false alarms".
+            - "True negatives" is the same as "correct negatives".
 
         References:
             - Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill. \
@@ -798,8 +936,23 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         Returns:
             xr.DataArray: An xarray object containing Yule's Q
 
-        Notes:    
+        .. math::
+
+            \\begin{aligned}
+                \\text{Yule's Q} &= \\frac{\\text{OR} - 1}{\\text{OR} + 1}
+                        \\\\ &= \\frac{\\text{true positives} \\cdot \\text{true negatives}
+                                         - \\text{false positives} \\cdot \\text{false negatives}}{
+                                       \\text{true positives} \\cdot \\text{true negatives}
+                                         + \\text{false positives} \\cdot \\text{false negatives}}
+            \\end{aligned}
+
+        Notes:
             - Range: -1 to 1, 0 indicates no skill. Perfect score: 1.
+            - OR = Odds ratio, see: :meth:`odds_ratio`.
+            - "True positives" is the same as "hits".
+            - "False negatives" is the same as "misses".
+            - "False positives" is the same as "false alarms".
+            - "True negatives" is the same as "correct negatives".
 
         References:
             Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill. \
@@ -807,6 +960,56 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             https://doi.org/10.1175/1520-0434(2000)015%3C0221:UOTORF%3E2.0.CO;2
         """
         return self.odds_ratio_skill_score()
+
+    def symmetric_extremal_dependence_index(self) -> xr.DataArray:
+        """
+        Calculates the Symmetric Extremal Dependence Index (SEDI).
+
+        Returns:
+            xr.DataArray: An xarray object containing the SEDI score
+
+        .. math::
+            \\frac{\\ln(\\text{POFD}) - \\ln(\\text{POD}) + \\ln(\\text{1-POD}) - \\ln(\\text{1 -POFD})}
+            {\\ln(\\text{POFD}) + \\ln(\\text{POD}) + \\ln(\\text{1-POD}) + \\ln(\\text{1 -POFD})}
+
+        where
+
+        .. math::
+            \\text{POD} = \\frac{\\text{true positives}}{\\text{true positives} + \\text{false negatives}}
+
+        and
+
+        .. math::
+            \\text{POFD} = \\frac{\\text{false positives}}{\\text{true negatives} + \\text{false positives}}
+
+
+        Notes:
+            - POD = Probability of Detection
+            - POFD = Probability of False Detection
+            - "True positives" is the same as "hits".
+            - "False negatives" is the same as "misses".
+            - "False positives" is the same as "false alarms".
+            - "True negatives" is the same as "correct negatives".
+            - Range: -1 to 1, Perfect score: 1.
+
+
+        References:
+            Ferro, C.A.T. and Stephenson, D.B., 2011. Extremal dependence indices: Improved verification
+            measures for deterministic forecasts of rare binary events. Weather and Forecasting, 26(5), pp.699-713.
+            https://doi.org/10.1175/WAF-D-10-05030.1
+        """
+        score = (
+            np.log(self.probability_of_false_detection())
+            - np.log(self.probability_of_detection())
+            + np.log(1 - self.probability_of_detection())
+            - np.log(1 - self.probability_of_false_detection())
+        ) / (
+            np.log(self.probability_of_false_detection())
+            + np.log(self.probability_of_detection())
+            + np.log(1 - self.probability_of_detection())
+            + np.log(1 - self.probability_of_false_detection())
+        )
+        return score
 
 
 class BinaryContingencyManager(BasicContingencyManager):
