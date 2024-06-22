@@ -57,7 +57,7 @@ bibliography: paper.bib
 
 # Summary
 
-`scores` is a Python package containing mathematical functions for the verification, evaluation and optimisation of forecasts, predictions or models. It primarily supports the geoscience communities; in particular, the meteorological, climatological and oceanographic communities. In addition to supporting the Earth system science communities, it also has wide potential application in machine learning and other domains such as economics.
+`scores` is a Python package containing mathematical functions for the verification, evaluation and optimisation of forecasts, predictions or models which use labelled n-dimensional data. It primarily supports the geoscience communities; in particular, the meteorological, climatological and oceanographic communities. `scores` also has wide potential application in machine learning where labelled n-dimensional data is used.
 
 `scores` not only includes common scores (e.g. Mean Absolute Error), it also includes novel scores not commonly found elsewhere (e.g. FIxed Risk Multicategorical (FIRM) score, Flip-Flop Index), complex scores (e.g. threshold-weighted continuous ranked probability score), and statistical tests (such as the Diebold Mariano test). It also contains isotonic regression which is becoming an increasingly important tool in forecast verification and can be used to generate stable reliability diagrams. Additionally, it provides pre-processing tools for preparing data for scores in a variety of formats including cumulative distribution functions (CDF). At the time of writing, `scores` includes over 50 metrics, statistical techniques and data processing tools.
 
@@ -65,7 +65,7 @@ All of the scores and statistical techniques in this package have undergone a th
 
 `scores` primarily supports `xarray` datatypes for Earth system data, allowing it to work with NetCDF4, HDF5, Zarr and GRIB data sources among others. `scores` uses Dask for scaling and performance. It has expanding support for `pandas`.  
 
-The software repository can be found at [https://github.com/nci/scores/](https://github.com/nci/scores/).
+The `scores` software repository can be found at [https://github.com/nci/scores/](https://github.com/nci/scores/).
 
 \pagebreak
 
@@ -73,11 +73,13 @@ The software repository can be found at [https://github.com/nci/scores/](https:/
 
 The purpose of this software is (a) to mathematically verify and validate models and predictions and (b) to foster research into new scores and metrics. 
 
+Labelled n-dimensional (multi-dimensional) data is widely used in the Earth system sciences. While there are existing open source Python packages for verifying labelled n-dimensional data (see section 1.4), none of these packages offer all of the key benefits of `scores`. 
+
 ## 1.1 Key Benefits of `scores`
 
 In order to meet the needs of researchers and other users, `scores` provides the following key benefits.
 
-**1.1.1 Data Handling**
+### 1.1.1 Data Handling
 
 - Works with n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly used for:
   - gridded Earth system data (e.g. numerical weather prediction models)
