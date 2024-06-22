@@ -75,7 +75,7 @@ Labelled, n-dimensional data is widely used in many scientific fields. The Earth
 
 The purpose of `scores` is (a) to mathematically verify and validate models and predictions and (b) to foster research into new scores and metrics. 
 
-`scores` handles dimensionality and weighting (e.g. latitude weighting) more effectively than commonly-used data science packages. While there are existing open source Python packages for verifying labelled n-dimensional data (see "Related Software Packages" below), none of these packages offer all of the key benefits of `scores`. 
+`scores` handles dimensionality and weighting (e.g. latitude weighting) more effectively than commonly-used data science packages. While there are existing open source Python packages for verifying labelled n-dimensional data (see "Related Software Packages" further below), none of these packages offer all of the key benefits of `scores`.
 
 ## Key Benefits of `scores`
 
@@ -130,7 +130,9 @@ Table: A **curated selection** of the metrics, tools and statistical tests curre
 
 ## Use in Academic Work
 
-In 2015, the Australian Bureau of Meteorology began developing a new verification system called Jive, which became operational in 2022. For a description of Jive see @loveday2024jive. The Jive verification metrics have been used to support several publications [@Griffiths:2017; @Foley:2020; @Taggart:2022d; @Taggart:2022b; @Taggart:2022c]. `scores` has arisen from the Jive verification system and was created to modularise the Jive verification functions and make them available as an open source package. `scores` also includes additional metrics that Jive does not contain.
+In 2015, the Australian Bureau of Meteorology began developing a new verification system called Jive, which became operational in 2022. For a description of Jive see @loveday2024jive. The Jive verification metrics have been used to support several publications [@Griffiths:2017; @Foley:2020; @Taggart:2022d; @Taggart:2022b; @Taggart:2022c]. 
+
+`scores` has arisen from the Jive verification system and provides Jive verification functions as a modular, open source package. `scores` also includes additional metrics that Jive does not contain. 
 
 `scores` has been used to explore user-focused approaches to evaluating probabilistic and categorical forecasts [@Loveday2024ts]. 
 
