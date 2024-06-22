@@ -50,7 +50,7 @@ affiliations:
    index: 3
 
 
-date: 12 June 2024
+date: 22 June 2024
 bibliography: paper.bib 
 
 ---
@@ -69,11 +69,11 @@ The software repository can be found at [https://github.com/nci/scores/](https:/
 
 \pagebreak
 
-# Statement of Need
+# 1 Statement of Need
 
 The purpose of this software is (a) to mathematically verify and validate models and predictions and (b) to foster research into new scores and metrics. 
 
-## Key Benefits of `scores`
+## 1.1 Key Benefits of `scores`
 
 In order to meet the needs of researchers and other users, `scores` provides the following key benefits.
 
@@ -101,7 +101,7 @@ In order to meet the needs of researchers and other users, `scores` provides the
 - Expanding support for `pandas` [@pandas:2024; @McKinney:2010].
 
 
-## Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
+## 1.2 Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
 
 At the time of writing, `scores` includes over 50 metrics, statistical techniques and data processing tools. For an up to date list, please see the `scores` documentation.
 
@@ -123,13 +123,13 @@ Table: A **curated selection** of the metrics, tools and statistical tests curre
 |
 | **Processing Tools**        	|Tools to pre-process data.                 	|Data matching, discretisation, cumulative density function manipulation. |
 
-## Use in Academic Work
+## 1.3 Use in Academic Work
 
 In 2015, the Australian Bureau of Meteorology began developing a new verification system called Jive, which became operational in 2022. For a description of Jive see @loveday2024jive. The Jive verification metrics have been used to support several publications [@Griffiths:2017; @Foley:2020; @Taggart:2022d; @Taggart:2022b; @Taggart:2022c]. `scores` has arisen from the Jive verification system and was created to modularise the Jive verification functions and make them available as an open source package. `scores` also includes additional metrics that Jive does not contain.
 
 `scores` has been used to explore user-focused approaches to evaluating probabilistic and categorical forecasts [@Loveday2024ts]. 
 
-## Related Software Packages
+## 1.4 Related Software Packages
 
 There are multiple open source verification packages in a range of languages. Below is a comparison of `scores` to other open source Python verification packages. None of these include all of the metrics implemented in `scores` (and vice versa).
  
@@ -145,7 +145,7 @@ There are multiple open source verification packages in a range of languages. Be
 
 `PyForecastTools` [@Morley:2020] is a Python package for model and forecast verification which supports `dmarray` rather than `xarray` data structures and does not include Jupyter Notebook tutorials.
 
-# Acknowledgements
+# 2 Acknowledgements
 
 We would like to thank Jason West and Robert Johnson from the Bureau of Meteorology for their feedback on an earlier version of this manuscript.
 
