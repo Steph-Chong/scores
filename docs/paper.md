@@ -69,19 +69,19 @@ The `scores` software repository can be found at [https://github.com/nci/scores/
 
 \pagebreak
 
-# 1 Statement of Need
+# Statement of Need
 
 Labelled, n-dimensional data is widely used in many scientific fields. The Earth system science community makes heavy use of physics-based and machine learning models, both to process observations (such as identifying land use from satellite data) and to make predictions about the future (such as forecasting the weather). These models, predictions and forecasts undergo verification and evaluation to assess their correctness. 
 
 The purpose of `scores` is (a) to mathematically verify and validate models and predictions and (b) to foster research into new scores and metrics. 
 
-`scores` handles dimensionality and weighting (e.g. latitude weighting) more effectively than commonly-used data science packages. While there are existing open source Python packages for verifying labelled n-dimensional data (see section 1.4), none of these packages offer all of the key benefits of `scores`. 
+`scores` handles dimensionality and weighting (e.g. latitude weighting) more effectively than commonly-used data science packages. While there are existing open source Python packages for verifying labelled n-dimensional data (see "Related Software Packages" below), none of these packages offer all of the key benefits of `scores`. 
 
-## 1.1 Key Benefits of `scores`
+## Key Benefits of `scores`
 
 In order to meet the needs of researchers and other users, `scores` provides the following key benefits.
 
-### 1.1.1 Data Handling
+### Data Handling
 
 - Works with labelled, n-dimensional data (e.g., geospatial, vertical and temporal dimensions) for both point-based and gridded data. `scores` can effectively handle the dimensionality, data size and data structures commonly used for:
   - gridded Earth system data (e.g. numerical weather prediction models)
@@ -89,7 +89,7 @@ In order to meet the needs of researchers and other users, `scores` provides the
 - Handles missing data, masking of data and weighting of results.
 - Supports `xarray` [@Hoyer:2017] datatypes, and works with NetCDF4 [@NetCDF:2024], HDF5 [@HDF5:2020], Zarr [@zarr:2020] and GRIB [@GRIB:2024] data sources among others.
 
-### 1.1.2 Usability
+### Usability
 
 - A companion Jupyter Notebook [@Jupyter:2024] tutorial for each metric and statistical test that demonstrates its use in practice.
 - Novel scores not commonly found elsewhere (e.g. FIRM [@Taggart:2022a], Flip-Flop Index [@Griffiths:2019; @griffiths2021circular]).
@@ -97,7 +97,7 @@ In order to meet the needs of researchers and other users, `scores` provides the
 - All scores and statistical techniques have undergone a thorough scientific and software review.
 - An area specifically to hold emerging scores which are still undergoing research and development. This provides a clear mechanism for people to share, access and collaborate on new scores, and be able to easily re-use versioned implementations of those scores.  
 
-### 1.1.3 Compatibility
+### Compatibility
 
 - Highly modular - provides its own implementations, avoids extensive dependencies and offers a consistent API.
 - Easy to integrate and use in a wide variety of environments. It has been used on workstations, servers and in high performance computing (supercomputing) environments. 
@@ -106,7 +106,7 @@ In order to meet the needs of researchers and other users, `scores` provides the
 - Expanding support for `pandas` [@pandas:2024; @McKinney:2010].
 
 
-## 1.2 Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
+## Metrics, Statistical Techniques and Data Processing Tools Included in `scores` 
 
 At the time of writing, `scores` includes over 50 metrics, statistical techniques and data processing tools. For an up to date list, please see the `scores` documentation.
 
@@ -128,13 +128,13 @@ Table: A **curated selection** of the metrics, tools and statistical tests curre
 |
 | **Processing Tools**        	|Tools to pre-process data.                 	|Data matching, discretisation, cumulative density function manipulation. |
 
-## 1.3 Use in Academic Work
+## Use in Academic Work
 
 In 2015, the Australian Bureau of Meteorology began developing a new verification system called Jive, which became operational in 2022. For a description of Jive see @loveday2024jive. The Jive verification metrics have been used to support several publications [@Griffiths:2017; @Foley:2020; @Taggart:2022d; @Taggart:2022b; @Taggart:2022c]. `scores` has arisen from the Jive verification system and was created to modularise the Jive verification functions and make them available as an open source package. `scores` also includes additional metrics that Jive does not contain.
 
 `scores` has been used to explore user-focused approaches to evaluating probabilistic and categorical forecasts [@Loveday2024ts]. 
 
-## 1.4 Related Software Packages
+## Related Software Packages
 
 There are multiple open source verification packages in a range of languages. Below is a comparison of `scores` to other open source Python verification packages. None of these include all of the metrics implemented in `scores` (and vice versa).
  
@@ -150,7 +150,7 @@ There are multiple open source verification packages in a range of languages. Be
 
 `PyForecastTools` [@Morley:2020] is a Python package for model and forecast verification which supports `dmarray` rather than `xarray` data structures and does not include Jupyter Notebook tutorials.
 
-# 2 Acknowledgements
+# Acknowledgements
 
 We would like to thank Jason West and Robert Johnson from the Bureau of Meteorology for their feedback on an earlier version of this manuscript.
 
