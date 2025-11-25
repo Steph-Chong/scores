@@ -10,7 +10,8 @@
 Documentation: [scores.readthedocs.io](https://scores.readthedocs.io)  
 Source code: [github.com/nci/scores](https://github.com/nci/scores)  
 Tutorial gallery: [available here](https://scores.readthedocs.io/en/stable/tutorials/Tutorial_Gallery.html)  
-Journal paper: [*scores: A Python package for verifying and evaluating models and predictions with xarray*](https://doi.org/10.21105/joss.06889)  
+What's new (14 Oct 2025): [release notes](https://scores.readthedocs.io/en/stable/release_notes.html#version-2-3-0-october-14-2025)  
+Journal paper: [*scores: A Python package for verifying and evaluating models and predictions with xarray*](https://doi.org/10.21105/joss.06889). 
 
 **If you use `scores` for your work or a publication, [please cite](https://scores.readthedocs.io/en/stable/#acknowledging-or-citing-scores)
 our [paper](https://doi.org/10.21105/joss.06889).**
